@@ -12,18 +12,10 @@ Single-cell sequencing technologies have revolutionized biomedical research by e
 
 ## Installation
 
-Installation of Amethyst can be done using devtools:
-
-```{r}
-library(devtools)
-devtools::install_github("lrylaarsdam/amethyst")
-```
-
 You will likely need to install one or more dependencies:
 
 ```{r}
-if (!requireNamespace("BiocManager", quietly = TRUE))
-install.packages("BiocManager")
+if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
 BiocManager::install()
 
 library(BiocManager)
@@ -32,10 +24,17 @@ BiocManager::install(c("caret", "devtools", "data.table", "dplyr", "furrr", "fut
   "plotly", "plyr", "purrr", "randomForest", "rhdf5", "rtracklayer", "scales", "stats", "stringr", 
   "tibble", "tidyr", "umap", "utils"))
 
-devtools::install_github("JinmiaoChenLab/Rphenograph")
-devtools::install_github("KrishnaswamyLab/MAGIC/Rmagic")
+if (!requireNamespace("remotes", quietly=TRUE)) install.packages("remotes")
+BiocManager::install("JinmiaoChenLab/Rphenograph")
+BiocManager::install("KrishnaswamyLab/MAGIC/Rmagic")
 ```
 
+Installation of Amethyst can then be done using devtools:
+
+```{r}
+library(devtools)
+devtools::install_github("lrylaarsdam/amethyst")
+```
 
 ## Getting Started
 
