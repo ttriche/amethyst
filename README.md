@@ -33,7 +33,7 @@ Installation of Amethyst can then be done using devtools:
 
 ```{r}
 library(devtools)
-devtools::install_github("lrylaarsdam/amethyst")
+BiocManager::install("lrylaarsdam/amethyst")
 ```
 
 ## Getting Started
